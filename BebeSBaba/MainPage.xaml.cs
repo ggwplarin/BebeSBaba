@@ -16,6 +16,7 @@ namespace BebeSBaba
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private List<int> points = new List<int>(){8,9,10,11,12,14,16,18,20,22,24,26,28,36,48,72};
         public MainPage()
         {
             this.InitializeComponent();
@@ -96,6 +97,14 @@ namespace BebeSBaba
         private void BoldTextBtn_Click(object sender, RoutedEventArgs e)
         {
             ShitEditor.Document.Selection.CharacterFormat.Bold = FormatEffect.Toggle;//переключаем начертание у выбранных символов
+        }
+
+        private void PointsSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (PointsSelector.SelectedIndex != -1)
+            {
+                ShitEditor.Document.Selection.CharacterFormat.Size = Convert.ToSingle(PointsSelector.SelectedItem);
+            }
         }
     }
 }

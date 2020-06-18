@@ -42,6 +42,9 @@
             <AppBarButton x:Name="OpenShitBtn" Icon="OpenFile" Label="Open" Click="OpenShitBtn_Click"/>
         </CommandBar>
         <CommandBar HorizontalAlignment="Right" IsSticky="True" Background="Transparent" DefaultLabelPosition="Collapsed">
+            <CommandBar.Content>
+                <ComboBox ItemsSource="{x:Bind points}" x:Name="PointsSelector" Height="40" SelectionChanged="PointsSelector_SelectionChanged"/>
+            </CommandBar.Content>
             <AppBarButton x:Name="ItalianoTextBtn" Icon="Italic" Click="ItalianoTextBtn_Click"/>
             <AppBarButton x:Name="BoldTextBtn" Icon="Bold" Click="BoldTextBtn_Click"/>
         </CommandBar>
