@@ -6,11 +6,12 @@ using Windows.Storage.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
+
+
 namespace BebeSBaba
 {
     /// <summary>
-    ///Вот эта ху#ня изобретена укропами, бл#ть. Взята буквально, бл#ть, с боем, на#уй.
-    ///Вот вы можете себе представить, бл#ть, больное воображение человека который вот эту еб#лу создал, бл#ть.
+    ///на разработку данного приложения ушло меньше 20 минут
     /// </summary>
     public sealed partial class MainPage : Page
     {
