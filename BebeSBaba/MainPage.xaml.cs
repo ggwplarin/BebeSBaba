@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Provider;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -85,6 +86,16 @@ namespace BebeSBaba
                         new Windows.UI.Popups.MessageDialog("Начальника, всё сломався!");
                 await errorBox.ShowAsync();
             }
+        }
+
+        private void ItalianoTextBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShitEditor.Document.Selection.CharacterFormat.Italic = FormatEffect.Toggle;//переключаем начертание у выбранных символов
+        }
+
+        private void BoldTextBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShitEditor.Document.Selection.CharacterFormat.Bold = FormatEffect.Toggle;//переключаем начертание у выбранных символов
         }
     }
 }
