@@ -17,9 +17,9 @@
 
         <CommandBar
             HorizontalAlignment="Left"
+            Background="Transparent"
             DefaultLabelPosition="Right"
-            IsSticky="True"
-            Background="Transparent">
+            IsSticky="True">
             <!--<CommandBar.SecondaryCommands>
 
                 <AppBarElementContainer>
@@ -34,20 +34,49 @@
                             FontFamily="Segoe MDL2 Assets" />
                     </StackPanel>
                 </AppBarElementContainer>
-            
+
                 мб потом допилю
-            
+
             </CommandBar.SecondaryCommands>-->
-            <AppBarButton x:Name="SaveShitBtn" Icon="Save" Label="Save"  Click="SaveShitBtn_Click"/>
-            <AppBarButton x:Name="OpenShitBtn" Icon="OpenFile" Label="Open" Click="OpenShitBtn_Click"/>
+            <AppBarButton
+                x:Name="SaveShitBtn"
+                Click="SaveShitBtn_Click"
+                Icon="Save"
+                Label="Save" />
+            <AppBarButton
+                x:Name="OpenShitBtn"
+                Click="OpenShitBtn_Click"
+                Icon="OpenFile"
+                Label="Open" />
         </CommandBar>
-        <CommandBar HorizontalAlignment="Right" IsSticky="True" Background="Transparent" DefaultLabelPosition="Collapsed">
+        <CommandBar
+            HorizontalAlignment="Right"
+            Background="Transparent"
+            DefaultLabelPosition="Collapsed"
+            IsSticky="True">
             <CommandBar.Content>
-                <ComboBox ItemsSource="{x:Bind points}" x:Name="PointsSelector" Height="40" SelectionChanged="PointsSelector_SelectionChanged"/>
+                <ComboBox
+                    x:Name="PointsSelector"
+                    Height="40"
+                    ItemsSource="{x:Bind points}"
+                    SelectionChanged="PointsSelector_SelectionChanged" />
             </CommandBar.Content>
-            <AppBarButton x:Name="ItalianoTextBtn" Icon="Italic" Click="ItalianoTextBtn_Click"/>
-            <AppBarButton x:Name="BoldTextBtn" Icon="Bold" Click="BoldTextBtn_Click"/>
+            <AppBarButton
+                x:Name="ItalianoTextBtn"
+                Click="ItalianoTextBtn_Click"
+                Icon="Italic" />
+            <AppBarButton
+                x:Name="BoldTextBtn"
+                Click="BoldTextBtn_Click"
+                Icon="Bold" />
         </CommandBar>
-        <RichEditBox x:Name="ShitEditor" Grid.Row="1" BorderThickness="1"/>
+        <RichEditBox
+            x:Name="ShitEditor"
+            Grid.Row="1"
+            BorderThickness="1">
+            <RichEditBox.SelectionFlyout>
+                <Flyout />
+            </RichEditBox.SelectionFlyout>
+        </RichEditBox>
     </Grid>
 </Page>
